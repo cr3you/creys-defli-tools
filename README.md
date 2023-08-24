@@ -80,7 +80,7 @@ wait 6+ seconds and then
 ```
 sudo systemctl start readsb.service
 ```
-**But you have to do it after every restart.**
+**But you have to do it after every station reboot.**
 
 Solution to that is delaying the start of readsb.service by enabling timer for it and start the service 1 minute after reboot (or a bit later).
 

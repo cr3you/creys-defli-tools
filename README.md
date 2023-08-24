@@ -49,10 +49,8 @@ sudo systemctl enable defli_feeder
 sudo systemctl start defli_feeder
 sudo systemctl start readsb.service
 ```
-### 1.1 Updating previous service.
-If you have set up my defli_service before DeFli said the socat command is mandatory.
-
-DeFli advised to use a bit different syntax of the command so you have tu update it:
+### 1.1 Updating previous defli_feeder service.
+If you have set up my defli_service before DeFli said the socat command is mandatory then you have to update it because the syntax is a bit different:
 ```
 sudo nano /usr/lib/systemd/system/defli_feeder.service
 ```
@@ -61,7 +59,7 @@ to
 ```
 ExecStart=/bin/sh -c 'socat tcp-l:30003,fork,reuseaddr tcp:77.68.73.29:30001'
 ```
-Press  CTRL+W then X (to write and exit the nano editor)
+Press CTRL+o then ENTER (confirm the filename) and then CTRL+x
 
 Then restart the service
 ```
@@ -82,10 +80,9 @@ wait 6+ seconds and then
 ```
 sudo systemctl start readsb.service
 ```
+**But you have to do it after every restart.**
 
-But you have to do it after every restart.
-
-Solution to that is delaying the start of readsb.service by enabling timer for it and start the service, let's say, 1 minute afeter reboot.
+Solution to that is delaying the start of readsb.service by enabling timer for it and start the service 1 minute after reboot (or a bit later).
 
 To do it post this into your putty window and press ENTER :)
 
@@ -106,7 +103,6 @@ sudo systemctl disable readsb.service
 sudo systemctl enable readsb.timer
 sudo systemctl start readsb.service
 ```
-
 
 
 ### 1.2 Debugging and checking if it works

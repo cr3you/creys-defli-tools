@@ -1,17 +1,17 @@
 # crey's-defli-tools
-a bunch of DeFli tools and helper scripts
+Just a bunch of DeFli tools and helper scripts.
 
 ## 1. "The SOCAT command"...
 
 **WARNING:** before proceeding you have to have readsb installed (just proceed with the standard DeFli installation, stop on the socat command)
+
+![install_defli_feeder](https://github.com/cr3you/creys-defli-tools/assets/73391409/0250ba8e-3726-49d0-af0d-a8edc2c103e2)
 
 TL:DR
 
 Copy all from the field below (you have nice "copy" icon in the right top corner)
 
 Paste all to the ssh console (if you are using Putty -> right click in the terminal window) and press ENTER. There you go!
-
-![install_defli_feeder](https://github.com/cr3you/defli-tools/assets/73391409/71c89bcf-205c-466f-80b9-31585c0a04a4)
 
 ```
 sudo apt -y install socat
@@ -114,5 +114,6 @@ If you want to check if your defli_feeder service is running and has no errors u
 sudo systemctl status defli_feeder.service
 ```
 If it's running you should see something similar:
-![image](https://github.com/cr3you/defli-tools/assets/73391409/ef8f50bf-106a-419d-8644-1624dc19dda8)
+![image](https://github.com/cr3you/creys-defli-tools/assets/73391409/7c1fa242-9988-4530-9ddb-69165cb94d88)
+
 

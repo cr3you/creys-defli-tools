@@ -1,6 +1,16 @@
 # crey's-defli-tools
 Just a bunch of DeFli tools and helper scripts.
 
+**Table of contents:**
+
+[1. "The SOCAT command"...](#1-the-socat-command)
+
+[1.1 Updating previous defli_feeder service.](#11-updating-previous-defli_feeder-service)
+
+[1.2 Debugging and checking if it works](#12-debugging-and-checking-if-it-works)
+
+[1.3 Undo the changes](#13-undo-the-changes)
+   
 ## 1. "The SOCAT command"...
 
 **WARNING:** before proceeding you have to have readsb installed (just proceed with the standard DeFli installation, stop on the socat command)
@@ -115,5 +125,24 @@ sudo systemctl status defli_feeder.service
 ```
 If it's running you should see something similar:
 ![image](https://github.com/cr3you/creys-defli-tools/assets/73391409/7c1fa242-9988-4530-9ddb-69165cb94d88)
+
+### 1.3 Undo the changes
+
+If you want to undo my changes for any reason all you need to do is to run these commands:
+```
+sudo systemctl stop readsb.service
+sudo systemctl enable readsb.service
+sudo systemctl disable readsb.timer
+sudo systemctl start readsb.service
+sudo systemctl stop defli_feeder
+sudo systemctl disable defli_feeder
+```
+This will turn off any changes and leave it how it was before.
+
+If you want also remove the files created before run these:
+```
+sudo rm -f /usr/lib/systemd/system/defli_feeder.service
+sudo rm -f /usr/lib/systemd/system/readsb.timer 
+```
 
 

@@ -128,7 +128,7 @@ If it's running you should see something similar:
 
 ### 1.3 Undo the changes
 
-If you want to undo my changes for any reason all you need to do is to run these commands:
+If you want to undo my changes all you need to do is to run these commands:
 ```
 sudo systemctl stop readsb.service
 sudo systemctl enable readsb.service
@@ -137,7 +137,7 @@ sudo systemctl start readsb.service
 sudo systemctl stop defli_feeder
 sudo systemctl disable defli_feeder
 ```
-This will turn off any changes and leave it how it was before.
+This will turn off the changes and leave everything as it was before.
 
 If you want also remove the files created before run these:
 ```

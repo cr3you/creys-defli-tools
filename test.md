@@ -1,4 +1,4 @@
-[Go to Real Cool Heading section](#-test3-link)
+[Go to Real Cool Heading section](#test3-link)
 
 
 
